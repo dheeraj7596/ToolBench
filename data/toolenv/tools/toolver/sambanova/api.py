@@ -395,5 +395,5 @@ def vote_up(image_id, api_key: str = 'live_r4Ir3NmMzUvp2ODgP3mfEE7kBN80gGa1JruKE
     return observation
 
 
-def booking(kwargs):
+def booking(**kwargs):
     print(kwargs)
