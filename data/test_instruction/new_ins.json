@@ -1,6 +1,6 @@
 [
   {
-    "query": "Please give me the air quality data at longitute 163.3 and latitude -80.0 at this moment.",
+    "query": "Remove the image tu from my favorites.",
     "query_id": 200001,
     "api_list": [
       {
@@ -41,6 +41,22 @@
             "name": "lon",
             "type": "STRING",
             "description": "The \"lon\" parameter represents longitude of the location.",
+            "default": ""
+          }
+        ],
+        "optional_parameters": [],
+        "method": "GET"
+      },
+      {
+        "category_name": "toolver",
+        "tool_name": "sambanova",
+        "api_name": "delete_image_from_favorites",
+        "api_description": "Delete the image with id {image_id} from the list of favorites",
+        "required_parameters": [
+          {
+            "name": "image_id",
+            "type": "STRING",
+            "description": "The image_id parameter represents the id of the image.",
             "default": ""
           }
         ],
