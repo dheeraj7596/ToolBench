@@ -411,25 +411,24 @@ def booking(booking_type, means_of_transportation="None", location_from="None", 
     if departure_date == "None":
         departure_date_str = """API.set_departure_date("None")"""
     else:
-        departure_date_str = """departure_date = Date({departure_date})
-API.set_departure_date(departure_date)
-"""
+        departure_date_str = f"""departure_date = Date({departure_date})
+API.set_departure_date(departure_date)"""
     if return_date == "None":
         return_date_str = """API.set_return_date("None")"""
     else:
-        return_date_str = """return_date = Date({return_date})
+        return_date_str = f"""return_date = Date({return_date})
 API.set_return_date(return_date)"""
 
     if checkin_date == "None":
         checkin_date_str = """API.set_checkin_date("None")"""
     else:
-        checkin_date_str = """checkin_date = Date({checkin_date})
+        checkin_date_str = f"""checkin_date = Date({checkin_date})
 API.set_checkin_date(checkin_date)"""
 
     if checkout_date == "None":
         checkout_date_str = """API.set_checkout_date("None")"""
     else:
-        checkout_date_str = """checkout_date = Date({checkout_date})
+        checkout_date_str = f"""checkout_date = Date({checkout_date})
 API.set_checkout_date(checkout_date)"""
 
     t = f"""API.select_booking_type({booking_type})
