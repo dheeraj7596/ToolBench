@@ -1,6 +1,6 @@
 [
   {
-    "query": "Remove the image tu from my favorites.",
+    "query": "I'm traveling to Sioux Falls between 2023-10-05 and 2023-10-11. Help me book 6 Queen Bed room(s) there between $600 and $860. I also need to purchase train tickets for 6 adults and 4 children for this trip. We will depart from Tallahassee.",
     "query_id": 200001,
     "api_list": [
       {
@@ -58,6 +58,118 @@
             "type": "STRING",
             "description": "The image_id parameter represents the id of the image.",
             "default": ""
+          }
+        ],
+        "optional_parameters": [],
+        "method": "GET"
+      },
+      {
+        "category_name": "toolver",
+        "tool_name": "sambanova",
+        "api_name": "booking",
+        "api_description": "Make a travel or hotel booking",
+        "required_parameters": [
+          {
+            "name": "booking_type",
+            "type": "STRING",
+            "description": "The parameter booking_type allows users to choose between different booking types, including 'hotels', 'trip tickets', or both simultaneously.",
+            "default": ""
+          },
+          {
+            "name": "means_of_transportation",
+            "type": "STRING",
+            "description": "The parameter \"means_of_transportation\" allows users to choose a transportation type from options including 'flight', 'train', 'bus', or 'cruise'. The default transportation_type is set to 'None' if no specific transportation type is specified.",
+            "default": "None"
+          },
+          {
+            "name": "location_from",
+            "type": "STRING",
+            "description": "The \"location_from\" parameter specifies the departure location. The default \"location_from\" value is set to 'None' if no origin is specified or if the user is not booking a travel ticket.",
+            "default": "None"
+          },
+          {
+            "name": "location_to",
+            "type": "STRING",
+            "description": "The \"location_to\" parameter allows you to specify the arrival location. The default \"location_to\" value is set to 'None' if no destination is specified or if the user is not booking a travel ticket.",
+            "default": "None"
+          },
+          {
+            "name": "min_price_ticket",
+            "type": "STRING",
+            "description": "The parameter \"min_price_ticket\" is used to establish the minimum price at which the user wants to buy tickets for. The default minimum price is set to 'None' if nothing is specified.",
+            "default": "None"
+          },
+          {
+            "name": "max_price_ticket",
+            "type": "STRING",
+            "description": "The parameter \"max_price_ticket\" is used to establish the maximum price at which the user wants to buy tickets for. The default maximum price is set to 'None' if nothing is specified.",
+            "default": "None"
+          },
+          {
+            "name": "num_adults",
+            "type": "STRING",
+            "description": "The parameter \"num_adults\" represents the number of adults. The default number of adults is set to 'None' if nothing is specified.",
+            "default": "None"
+          },
+          {
+            "name": "num_children",
+            "type": "STRING",
+            "description": "The parameter \"num_children\" represents the number of children. The default number of children is set to 'None' if nothing is specified.",
+            "default": "None"
+          },
+          {
+            "name": "departure_date",
+            "type": "STRING",
+            "description": "The \"departure_date\" parameter represents the departure date for a trip when booking trip tickets. The date must be in the format of \"Date(month, date, year)\". The default departure date is set to 'None' if nothing is specified.",
+            "default": "None"
+          },
+          {
+            "name": "return_date",
+            "type": "STRING",
+            "description": "The \"return_date\" parameter allows the user to specify the return date for a trip. The date must be in the format of \"Date(month, date, year)\". The default return date is set to 'None' if nothing is specified.",
+            "default": "None"
+          },
+          {
+            "name": "location",
+            "type": "STRING",
+            "description": "The \"location\" parameter is to set the location for the search area. The default hotel location is set to 'None' if nothing is specified.",
+            "default": "None"
+          },
+          {
+            "name": "checkin_date",
+            "type": "STRING",
+            "description": "The parameter \"checkin_date\" is used to establish the date for checking into a hotel. The default checkin date is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+            "default": "None"
+          },
+          {
+            "name": "checkout_date",
+            "type": "STRING",
+            "description": "The parameter \"checkout_date\" is used to establish the date for checking out of a hotel. The date must be in the format of \"Date(month, date, year)\". The default checkout date is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+            "default": "None"
+          },
+          {
+            "name": "num_rooms",
+            "type": "STRING",
+            "description": "The parameter \"num_rooms\" allows users to specify the number of hotel rooms they intend to book. The default number of rooms is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+            "default": "None"
+          },
+          {
+            "name": "room_type",
+            "type": "STRING",
+            "description": "The parameter \"room_type\" allows users to choose the type of hotel room they prefer from a selection that includes 'King Bed', 'Queen Bed', 'Double', and 'Luxury'. The default room type is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+            "default": "None"
+          },
+          {
+            "name": "min_price_room",
+            "type": "STRING",
+            "description": "The parameter \"min_price_room\" allows for establishing the minimum price for hotel rooms. The default minimum room price is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+            "default": "None"
+          },
+          {
+            "name": "max_price_room",
+            "type": "STRING",
+            "description": "The parameter \"max_price_room\" allows for establishing the maximum price for hotel rooms. The default maximum room price is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+            "default": "None"
           }
         ],
         "optional_parameters": [],

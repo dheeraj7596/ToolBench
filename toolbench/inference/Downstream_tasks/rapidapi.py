@@ -501,6 +501,7 @@ class pipeline_runner:
         query = data_dict["query"]
         if process_id == 0:
             print(colored(f"[process({process_id})]now playing {query}, with {len(env.functions)} APIs", "green"))
+            print("INS:", query)
         [callback.on_request_start(
             user_input=query,
             method=method,
