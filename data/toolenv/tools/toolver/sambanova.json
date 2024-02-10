@@ -447,13 +447,13 @@
                 {
                     "name": "departure_date",
                     "type": "STRING",
-                    "description": "The \"departure_date\" parameter represents the departure date for a trip when booking trip tickets. The date must be in the format of \"Date(month, date, year)\". The default departure date is set to 'None' if nothing is specified.",
+                    "description": "The \"departure_date\" parameter represents the departure date for a trip when booking trip tickets. The date must be in comma separated month, date, year. The default departure date is set to 'None' if nothing is specified.",
                     "default": "None"
                 },
                 {
                     "name": "return_date",
                     "type": "STRING",
-                    "description": "The \"return_date\" parameter allows the user to specify the return date for a trip. The date must be in the format of \"Date(month, date, year)\". The default return date is set to 'None' if nothing is specified.",
+                    "description": "The \"return_date\" parameter allows the user to specify the return date for a trip. The date must be in comma separated month, date, year. The default return date is set to 'None' if nothing is specified.",
                     "default": "None"
                 },
                 {
@@ -465,13 +465,13 @@
                 {
                     "name": "checkin_date",
                     "type": "STRING",
-                    "description": "The parameter \"checkin_date\" is used to establish the date for checking into a hotel. The default checkin date is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+                    "description": "The parameter \"checkin_date\" is used to establish the date for checking into a hotel. The date must be in comma separated month, date, year. The default checkin date is set to 'None' if nothing is specified or if the user is not booking a hotel.",
                     "default": "None"
                 },
                 {
                     "name": "checkout_date",
                     "type": "STRING",
-                    "description": "The parameter \"checkout_date\" is used to establish the date for checking out of a hotel. The date must be in the format of \"Date(month, date, year)\". The default checkout date is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+                    "description": "The parameter \"checkout_date\" is used to establish the date for checking out of a hotel. The date must be in comma separated month, date, year. The default checkout date is set to 'None' if nothing is specified or if the user is not booking a hotel.",
                     "default": "None"
                 },
                 {
