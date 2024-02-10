@@ -6,7 +6,8 @@ def forecast_air_pollution(lat: str, lon: str, api_key: str = '2a045ada80a040c4d
     "Get the balance of an bitcoin address"
 
     """
-    url = f"curl -X GET 'https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat={lat}&lon={lon}&appid={api_key}'"
+    url = f"https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat={lat}&lon={lon}&appid={api_key}"
+    print("URL:", url)
     response = requests.get(url)
     try:
         observation = response.json()
@@ -20,7 +21,8 @@ def current_air_pollution(lat: str, lon: str, api_key: str = '2a045ada80a040c4d6
     "Get the balance of an bitcoin address"
 
     """
-    url = f"curl -X GET 'https://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={api_key}'"
+    url = f"https://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={api_key}"
+    print("URL:", url)
     response = requests.get(url)
     try:
         observation = response.json()

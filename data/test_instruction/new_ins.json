@@ -5,7 +5,7 @@
     "api_list": [
       {
         "category_name": "toolver",
-        "tool_name": "toolver",
+        "tool_name": "sambanova",
         "api_name": "forecast_air_pollution",
         "api_description": "Get the future air pollution data in location with latitude={lat}, longitude={lon}",
         "required_parameters": [
@@ -27,7 +27,7 @@
       },
       {
         "category_name": "toolver",
-        "tool_name": "toolver",
+        "tool_name": "sambanova",
         "api_name": "current_air_pollution",
         "api_description": "Get the current air pollution data in location with latitude={lat}, longitude={lon}",
         "required_parameters": [
@@ -56,11 +56,11 @@
   },
   {
     "query": "I want to get a 'hello world' string.",
-    "query_id": 200001,
+    "query_id": 200002,
     "api_list": [
       {
         "category_name": "toolver",
-        "tool_name": "toolver",
+        "tool_name": "sambanova",
         "api_name": "forecast_air_pollution",
         "api_description": "Get the future air pollution data in location with latitude={lat}, longitude={lon}",
         "required_parameters": [
@@ -82,7 +82,7 @@
       },
       {
         "category_name": "toolver",
-        "tool_name": "toolver",
+        "tool_name": "sambanova",
         "api_name": "current_air_pollution",
         "api_description": "Get the current air pollution data in location with latitude={lat}, longitude={lon}",
         "required_parameters": [
