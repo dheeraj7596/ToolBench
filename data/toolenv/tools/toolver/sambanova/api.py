@@ -454,4 +454,4 @@ API.set_max_room_price({max_price_room})
 API.search()"""
     print("API:", t)
     print("###")
-    return {"error": "", "status": 200}
+    return "Booking done"
