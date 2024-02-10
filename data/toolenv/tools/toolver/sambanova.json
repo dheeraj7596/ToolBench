@@ -1,0 +1,599 @@
+{
+    "tool_description": "Tool verifier test tools",
+    "tool_name": "toolver",
+    "title": "toolver",
+    "api_list": [
+        {
+            "name": "forecast_air_pollution",
+            "url": "",
+            "description": "Get the future air pollution data in location with latitude={lat}, longitude={lon}",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "lat",
+                    "type": "STRING",
+                    "description": "The \"lat\" parameter represents latitude of the location.",
+                    "default": ""
+                },
+                {
+                    "name": "lon",
+                    "type": "STRING",
+                    "description": "The \"lon\" parameter represents longitude of the location.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": []
+        },
+        {
+            "name": "current_air_pollution",
+            "url": "",
+            "description": "Get the current air pollution data in location with latitude={lat}, longitude={lon}",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "lat",
+                    "type": "STRING",
+                    "description": "The \"lat\" parameter represents latitude of the location.",
+                    "default": ""
+                },
+                {
+                    "name": "lon",
+                    "type": "STRING",
+                    "description": "The \"lon\" parameter represents longitude of the location.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": []
+        },
+        {
+            "name": "geographical_coordinates",
+            "url": "",
+            "description": "Get up to 'k' geographical coordinates of locations named 'city_name'",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "q",
+                    "type": "STRING",
+                    "description": "The \"q\" parameter represents city name.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": [
+                {
+                    "name": "limit",
+                    "type": "NUMBER",
+                    "description": "The \"limit\" parameter is an optional integer value that specifies the number of results to be returned. It allows you to request up to a maximum of 25 results, with the default value being set to 1 if no specific limit is provided.",
+                    "default": 1
+                }
+            ]
+        },
+        {
+            "name": "current_weather_city",
+            "url": "",
+            "description": "Get the current weather data in {city}",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "q",
+                    "type": "STRING",
+                    "description": "The \"q\" parameter represents city name.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": [
+                {
+                    "name": "units",
+                    "type": "STRING",
+                    "default": "standard",
+                    "description": "The \"units\" parameter represents units of measurement. The default units is set to 'standard' if nothing is specified."
+                },
+                {
+                    "name": "mode",
+                    "type": "STRING",
+                    "default": "json",
+                    "description": "The \"mode\" parameter represents response format requested by the user. 'JSON' format is used by default. To get data in 'XML' format use mode=xml."
+                },
+                {
+                    "name": "lang",
+                    "type": "STRING",
+                    "default": "en",
+                    "description": "\"The \\\"lang\\\" parameter represents the language of the output. 'en' for English; 'fr' for French; 'zh_cn' for simplified Chinese; 'it' for Italian; 'de' for German; 'ru' for Russian; 'ja' for Japanese; 'nl' for Dutch. The default lang is set to 'en' if nothing is specified.\""
+                }
+            ]
+        },
+        {
+            "name": "forecast_weather_city",
+            "url": "",
+            "description": "Get the weather data for future in a city",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "q",
+                    "type": "STRING",
+                    "description": "The \"q\" parameter represents city name.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": [
+                {
+                    "name": "units",
+                    "type": "STRING",
+                    "default": "standard",
+                    "description": "The \"units\" parameter represents units of measurement. The default units is set to 'standard' if nothing is specified."
+                },
+                {
+                    "name": "mode",
+                    "type": "STRING",
+                    "default": "json",
+                    "description": "The \"mode\" parameter represents response format requested by the user. 'JSON' format is used by default. To get data in 'XML' format use mode=xml."
+                },
+                {
+                    "name": "lang",
+                    "type": "STRING",
+                    "default": "en",
+                    "description": "\"The \\\"lang\\\" parameter represents the language of the output. 'en' for English; 'fr' for French; 'zh_cn' for simplified Chinese; 'it' for Italian; 'de' for German; 'ru' for Russian; 'ja' for Japanese; 'nl' for Dutch. The default lang is set to 'en' if nothing is specified.\""
+                }
+            ]
+        },
+        {
+            "name": "forecast_weather_latitude_longitude",
+            "url": "",
+            "description": "Get the weather data for future in location with latitude={lat}, longitude={lon}",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "lat",
+                    "type": "STRING",
+                    "description": "The \"lat\" parameter represents latitude of the location.",
+                    "default": ""
+                },
+                {
+                    "name": "lon",
+                    "type": "STRING",
+                    "description": "The \"lon\" parameter represents longitude of the location.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": [
+                {
+                    "name": "units",
+                    "type": "STRING",
+                    "default": "standard",
+                    "description": "The \"units\" parameter represents units of measurement. The default units is set to 'standard' if nothing is specified."
+                },
+                {
+                    "name": "mode",
+                    "type": "STRING",
+                    "default": "json",
+                    "description": "The \"mode\" parameter represents response format requested by the user. 'JSON' format is used by default. To get data in 'XML' format use mode=xml."
+                },
+                {
+                    "name": "lang",
+                    "type": "STRING",
+                    "default": "en",
+                    "description": "\"The \\\"lang\\\" parameter represents the language of the output. 'en' for English; 'fr' for French; 'zh_cn' for simplified Chinese; 'it' for Italian; 'de' for German; 'ru' for Russian; 'ja' for Japanese; 'nl' for Dutch. The default lang is set to 'en' if nothing is specified.\""
+                }
+            ]
+        },
+        {
+            "name": "current_weather_latitude_longitude",
+            "url": "",
+            "description": "Get the current weather data in location with latitude={lat}, longitude={lon}",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "lat",
+                    "type": "STRING",
+                    "description": "The \"lat\" parameter represents latitude of the location.",
+                    "default": ""
+                },
+                {
+                    "name": "lon",
+                    "type": "STRING",
+                    "description": "The \"lon\" parameter represents longitude of the location.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": [
+                {
+                    "name": "units",
+                    "type": "STRING",
+                    "default": "standard",
+                    "description": "The \"units\" parameter represents units of measurement. The default units is set to 'standard' if nothing is specified."
+                },
+                {
+                    "name": "mode",
+                    "type": "STRING",
+                    "default": "json",
+                    "description": "The \"mode\" parameter represents response format requested by the user. 'JSON' format is used by default. To get data in 'XML' format use mode=xml."
+                },
+                {
+                    "name": "lang",
+                    "type": "STRING",
+                    "default": "en",
+                    "description": "\"The \\\"lang\\\" parameter represents the language of the output. 'en' for English; 'fr' for French; 'zh_cn' for simplified Chinese; 'it' for Italian; 'de' for German; 'ru' for Russian; 'ja' for Japanese; 'nl' for Dutch. The default lang is set to 'en' if nothing is specified.\""
+                }
+            ]
+        },
+        {
+            "name": "forecast_weather_zipcode",
+            "url": "",
+            "description": "Get the weather data for future in {zipcode} area",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "zip",
+                    "type": "STRING",
+                    "description": "The \"zip\" parameter represents the zip code.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": [
+                {
+                    "name": "units",
+                    "type": "STRING",
+                    "default": "standard",
+                    "description": "The \"units\" parameter represents units of measurement. The default units is set to 'standard' if nothing is specified."
+                },
+                {
+                    "name": "mode",
+                    "type": "STRING",
+                    "default": "json",
+                    "description": "The \"mode\" parameter represents response format requested by the user. 'JSON' format is used by default. To get data in 'XML' format use mode=xml."
+                },
+                {
+                    "name": "lang",
+                    "type": "STRING",
+                    "default": "en",
+                    "description": "\"The \\\"lang\\\" parameter represents the language of the output. 'en' for English; 'fr' for French; 'zh_cn' for simplified Chinese; 'it' for Italian; 'de' for German; 'ru' for Russian; 'ja' for Japanese; 'nl' for Dutch. The default lang is set to 'en' if nothing is specified.\""
+                }
+            ]
+        },
+        {
+            "name": "current_weather_zipcode",
+            "url": "",
+            "description": "Get the current weather data in {zipcode} area",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "zip",
+                    "type": "STRING",
+                    "description": "The \"zip\" parameter represents the zip code.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": [
+                {
+                    "name": "units",
+                    "type": "STRING",
+                    "default": "standard",
+                    "description": "The \"units\" parameter represents units of measurement. The default units is set to 'standard' if nothing is specified."
+                },
+                {
+                    "name": "mode",
+                    "type": "STRING",
+                    "default": "json",
+                    "description": "The \"mode\" parameter represents response format requested by the user. 'JSON' format is used by default. To get data in 'XML' format use mode=xml."
+                },
+                {
+                    "name": "lang",
+                    "type": "STRING",
+                    "default": "en",
+                    "description": "\"The \\\"lang\\\" parameter represents the language of the output. 'en' for English; 'fr' for French; 'zh_cn' for simplified Chinese; 'it' for Italian; 'de' for German; 'ru' for Russian; 'ja' for Japanese; 'nl' for Dutch. The default lang is set to 'en' if nothing is specified.\""
+                }
+            ]
+        },
+        {
+            "name": "delete_image_from_favorites",
+            "url": "",
+            "description": "Delete the image with id {image_id} from the list of favorites",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "image_id",
+                    "type": "STRING",
+                    "description": "The image_id parameter represents the id of the image.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": []
+        },
+        {
+            "name": "find_images",
+            "url": "",
+            "description": "Search for cat images, with optional requirements: image size, image type, search order, number of results, and cat breeds",
+            "method": "GET",
+            "required_parameters": [],
+            "optional_parameters": [
+                {
+                    "name": "size",
+                    "type": "STRING",
+                    "default": "med",
+                    "description": "The \"size\" parameter, which is optional, determines the size of the image to be returned and can be set to one of three options: 'small', 'med', or 'full'. The default size, if not specified, is 'med'."
+                },
+                {
+                    "name": "mime_types",
+                    "type": "STRING",
+                    "default": "jpg,gif,png",
+                    "description": "The \"mime_types\" parameter is an optional setting that accepts a comma-delimited string of image types, including 'gif', 'jpg', and 'png'. By default, if user doesn't mention anything, it returns images of all available types, which are 'jpg', 'gif', and 'png'."
+                },
+                {
+                    "name": "order",
+                    "type": "STRING",
+                    "default": "RANDOM",
+                    "description": "The \"order\" parameter is an optional parameter that specifies the desired order in which to return results. It can be set to one of three options: 'RANDOM' to retrieve results in a random order, 'ASC' to retrieve results in ascending order, or 'DESC' to retrieve results in descending order. The default order is set to 'RANDOM' if no specific order is specified."
+                },
+                {
+                    "name": "limit",
+                    "type": "NUMBER",
+                    "default": 1,
+                    "description": "The \"limit\" parameter is an optional integer value that specifies the number of results to be returned. It allows you to request up to a maximum of 25 results, with the default value being set to 1 if no specific limit is provided."
+                },
+                {
+                    "name": "breeds",
+                    "type": "STRING",
+                    "default": "",
+                    "description": "The \"breeds\" parameter is an optional field that accepts a comma-delimited string of breed abbreviations, allowing users to specify one or more specific breeds when making a request or query."
+                }
+            ]
+        },
+        {
+            "name": "get_favorite_cat_images",
+            "url": "",
+            "description": "Get the list of favorite cat images.",
+            "method": "GET",
+            "required_parameters": [],
+            "optional_parameters": []
+        },
+        {
+            "name": "post_to_favorites",
+            "url": "",
+            "description": "Add the image with id {image_id} to the list of favorites",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "image_id",
+                    "type": "STRING",
+                    "description": "The image_id parameter represents the id of the image.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": []
+        },
+        {
+            "name": "vote_down",
+            "url": "",
+            "description": "Vote down the image with id {image_id}",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "image_id",
+                    "type": "STRING",
+                    "description": "The image_id parameter represents the id of the image.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": []
+        },
+        {
+            "name": "vote_up",
+            "url": "",
+            "description": "Vote up the image with id {image_id}",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "image_id",
+                    "type": "STRING",
+                    "description": "The image_id parameter represents the id of the image.",
+                    "default": ""
+                }
+            ],
+            "optional_parameters": []
+        },
+        {
+            "name": "booking",
+            "url": "",
+            "description": "Make a travel or hotel booking",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "booking_type",
+                    "type": "STRING",
+                    "description": "The parameter booking_type allows users to choose between different booking types, including 'hotels', 'trip tickets', or both simultaneously.",
+                    "default": ""
+                },
+                {
+                    "name": "means_of_transportation",
+                    "type": "STRING",
+                    "description": "The parameter \"means_of_transportation\" allows users to choose a transportation type from options including 'flight', 'train', 'bus', or 'cruise'. The default transportation_type is set to 'None' if no specific transportation type is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "location_from",
+                    "type": "STRING",
+                    "description": "The \"location_from\" parameter specifies the departure location. The default \"location_from\" value is set to 'None' if no origin is specified or if the user is not booking a travel ticket.",
+                    "default": "None"
+                },
+                {
+                    "name": "location_to",
+                    "type": "STRING",
+                    "description": "The \"location_to\" parameter allows you to specify the arrival location. The default \"location_to\" value is set to 'None' if no destination is specified or if the user is not booking a travel ticket.",
+                    "default": "None"
+                },
+                {
+                    "name": "min_price_ticket",
+                    "type": "STRING",
+                    "description": "The parameter \"min_price_ticket\" is used to establish the minimum price at which the user wants to buy tickets for. The default minimum price is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "max_price_ticket",
+                    "type": "STRING",
+                    "description": "The parameter \"max_price_ticket\" is used to establish the maximum price at which the user wants to buy tickets for. The default maximum price is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_adults",
+                    "type": "STRING",
+                    "description": "The parameter \"num_adults\" represents the number of adults. The default number of adults is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_children",
+                    "type": "STRING",
+                    "description": "The parameter \"num_children\" represents the number of children. The default number of children is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "departure_date",
+                    "type": "STRING",
+                    "description": "The \"departure_date\" parameter represents the departure date for a trip when booking trip tickets. The date must be in the format of \"Date(month, date, year)\". The default departure date is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "return_date",
+                    "type": "STRING",
+                    "description": "The \"return_date\" parameter allows the user to specify the return date for a trip. The date must be in the format of \"Date(month, date, year)\". The default return date is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "location",
+                    "type": "STRING",
+                    "description": "The \"location\" parameter is to set the location for the search area. The default hotel location is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "checkin_date",
+                    "type": "STRING",
+                    "description": "The parameter \"checkin_date\" is used to establish the date for checking into a hotel. The default checkin date is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+                    "default": "None"
+                },
+                {
+                    "name": "checkout_date",
+                    "type": "STRING",
+                    "description": "The parameter \"checkout_date\" is used to establish the date for checking out of a hotel. The date must be in the format of \"Date(month, date, year)\". The default checkout date is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_rooms",
+                    "type": "STRING",
+                    "description": "The parameter \"num_rooms\" allows users to specify the number of hotel rooms they intend to book. The default number of rooms is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+                    "default": "None"
+                },
+                {
+                    "name": "room_type",
+                    "type": "STRING",
+                    "description": "The parameter \"room_type\" allows users to choose the type of hotel room they prefer from a selection that includes 'King Bed', 'Queen Bed', 'Double', and 'Luxury'. The default room type is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+                    "default": "None"
+                },
+                {
+                    "name": "min_price_room",
+                    "type": "STRING",
+                    "description": "The parameter \"min_price_room\" allows for establishing the minimum price for hotel rooms. The default minimum room price is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+                    "default": "None"
+                },
+                {
+                    "name": "max_price_room",
+                    "type": "STRING",
+                    "description": "The parameter \"max_price_room\" allows for establishing the maximum price for hotel rooms. The default maximum room price is set to 'None' if nothing is specified or if the user is not booking a hotel.",
+                    "default": "None"
+                }
+            ],
+            "optional_parameters": []
+        },
+        {
+            "name": "home_search",
+            "url": "",
+            "description": "Search homes for buying or renting",
+            "method": "GET",
+            "required_parameters": [
+                {
+                    "name": "location",
+                    "type": "STRING",
+                    "description": "The \"location\" parameter is to set the location for the search area. The default hotel location is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "home_type",
+                    "type": "STRING",
+                    "description": "The \"home_type\" parameter represents home types for search. For home buying, home_types choices are: \"House\", \"Townhouse\", \"Condo\", \"Land\", \"Multi-family\", \"Mobile\", \"Co-op\"; for home renting, home_types choices are: \"House\", \"Townhouse\", \"Condo\", \"Apartment\". The default select_home_type is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "buy_or_rent",
+                    "type": "STRING",
+                    "description": "The \"buy_or_rent\" parameter is to specify whether to search homes for buying or renting. It can be chosen from 'buy' or 'rent'.",
+                    "default": "None"
+                },
+                {
+                    "name": "floor_number",
+                    "type": "STRING",
+                    "description": "The \"floor_number\" parameter represents the floor number. The default floor_number is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "max_commute_time",
+                    "type": "STRING",
+                    "description": "The \"max_commute_time\" parameter represents the maximum commute time in minute to office location, assuming the office location is already defined. The default max_commute_time is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "max_price",
+                    "type": "STRING",
+                    "description": "The \"max_price\" parameter represents the maximum home price in dollars. The default max_price is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "max_square_feet",
+                    "type": "STRING",
+                    "description": "The \"max_square_feet\" parameter represents the maximum home size in square feet. The default max_square_feet is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "min_price",
+                    "type": "STRING",
+                    "description": "The \"min_price\" parameter represents the minimum home price in dollars. The default min_price is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "min_square_feet",
+                    "type": "STRING",
+                    "description": "The \"min_square_feet\" parameter represents the minimum home size in square feet. The default min_square_feet is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_balconies",
+                    "type": "STRING",
+                    "description": "The \"num_balconies\" parameter represents the number of balconies. The default num_balconies is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_baths",
+                    "type": "STRING",
+                    "description": "The \"num_baths\" parameter represents the number of bathrooms. The default num_baths is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_beds",
+                    "type": "STRING",
+                    "description": "The \"num_beds\" parameter represents the number of bedrooms. The default num_beds is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_garages",
+                    "type": "STRING",
+                    "description": "The \"num_garages\" parameter represents the number of garages. The default num_garages is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_swimming_pools",
+                    "type": "STRING",
+                    "description": "The \"num_swimming_pools\" parameter represents the number of swimming pools. The default num_swimming_pools is set to 'None' if nothing is specified.",
+                    "default": "None"
+                }
+            ],
+            "optional_parameters": []
+        }
+    ],
+    "standardized_name": "tools"
+}
