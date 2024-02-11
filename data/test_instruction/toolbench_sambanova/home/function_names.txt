@@ -1,0 +1,15 @@
+API.set_location
+API.set_buy_or_rent
+API.set_min_price
+API.set_max_price
+API.set_num_beds
+API.set_num_baths
+API.select_home_type
+API.set_min_square_feet
+API.set_max_square_feet
+API.set_num_garages
+API.set_num_swimming_pools
+API.set_floor_number
+API.set_max_commute_time
+API.set_num_balconies
+API.search
