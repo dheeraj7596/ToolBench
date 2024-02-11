@@ -20,7 +20,7 @@ def get_api_list(path):
 
 
 if __name__ == "__main__":
-    in_dir = "/Users/dheerajmekala/Work/ToolBench/data/test_instruction/toolbench_sambanova/cat"
+    in_dir = "/Users/dheerajmekala/Work/ToolBench/data/test_instruction/toolbench_sambanova/booking"
     csv_path = os.path.join(in_dir, "test.csv")
     df = pd.read_csv(csv_path)
     api_list = get_api_list("/Users/dheerajmekala/Work/ToolBench/data/toolenv/tools/toolver/sambanova.json")
