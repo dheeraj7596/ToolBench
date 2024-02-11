@@ -432,37 +432,37 @@ API.set_checkin_date(checkin_date)"""
 API.set_checkout_date(checkout_date)"""
 
     if min_price_ticket == "None":
-        min_price_ticket_str =  f"""API.set_min_ticket_price("None")"""
+        min_price_ticket_str = f"""API.set_min_ticket_price("None")"""
     else:
         min_price_ticket_str = f"""API.set_min_ticket_price({min_price_ticket})"""
 
     if max_price_ticket == "None":
-        max_price_ticket_str =  f"""API.set_max_ticket_price("None")"""
+        max_price_ticket_str = f"""API.set_max_ticket_price("None")"""
     else:
         max_price_ticket_str = f"""API.set_max_ticket_price({max_price_ticket})"""
 
     if num_adults == "None":
-        num_adults_str =  f"""API.set_num_adults("None")"""
+        num_adults_str = f"""API.set_num_adults("None")"""
     else:
         num_adults_str = f"""API.set_num_adults({num_adults})"""
 
     if num_children == "None":
-        num_children_str =  f"""API.set_num_children("None")"""
+        num_children_str = f"""API.set_num_children("None")"""
     else:
         num_children_str = f"""API.set_num_children({num_children})"""
 
     if num_rooms == "None":
-        num_rooms_str =  f"""API.set_num_rooms("None")"""
+        num_rooms_str = f"""API.set_num_rooms("None")"""
     else:
         num_rooms_str = f"""API.set_num_rooms({num_rooms})"""
 
     if min_price_room == "None":
-        min_price_room_str =  f"""API.set_min_room_price("None")"""
+        min_price_room_str = f"""API.set_min_room_price("None")"""
     else:
         min_price_room_str = f"""API.set_min_room_price({min_price_room})"""
 
     if max_price_room == "None":
-        max_price_room_str =  f"""API.set_max_room_price("None")"""
+        max_price_room_str = f"""API.set_max_room_price("None")"""
     else:
         max_price_room_str = f"""API.set_max_room_price({max_price_room})"""
 
@@ -489,57 +489,83 @@ API.select_room_type("{room_type}")
 API.search()"""
     print("API:", t)
     print("###")
-    return "Booking done"
+    return "Booking success!"
 
 
-# def home_search(location="None", means_of_transportation="None", location_from="None", location_to="None",
-#             min_price_ticket="None", max_price_ticket="None", num_adults="None", num_children="None",
-#             departure_date="None", return_date="None", location="None", checkin_date="None", checkout_date="None",
-#             num_rooms="None", room_type="None", min_price_room="None", max_price_room="None"):
-#     if departure_date == "None":
-#         departure_date_str = """API.set_departure_date("None")"""
-#     else:
-#         departure_date_str = f"""departure_date = Date({departure_date})
-# API.set_departure_date(departure_date)"""
-#     if return_date == "None":
-#         return_date_str = """API.set_return_date("None")"""
-#     else:
-#         return_date_str = f"""return_date = Date({return_date})
-# API.set_return_date(return_date)"""
-#
-#     if checkin_date == "None":
-#         checkin_date_str = """API.set_checkin_date("None")"""
-#     else:
-#         checkin_date_str = f"""checkin_date = Date({checkin_date})
-# API.set_checkin_date(checkin_date)"""
-#
-#     if checkout_date == "None":
-#         checkout_date_str = """API.set_checkout_date("None")"""
-#     else:
-#         checkout_date_str = f"""checkout_date = Date({checkout_date})
-# API.set_checkout_date(checkout_date)"""
-#
-#     t = f"""API.select_booking_type({booking_type})
-# API.select_transportation({means_of_transportation})
-# location_from = Loc({location_from})
-# API.set_origin(location_from)
-# location_to = Loc({location_to})
-# API.set_destination(location_to)
-# API.set_min_ticket_price({min_price_ticket})
-# API.set_max_ticket_price({max_price_ticket})
-# API.set_num_adults({num_adults})
-# API.set_num_children({num_children})
-# {departure_date_str}
-# {return_date_str}
-# hotel_location = Loc({location})
-# API.set_hotel_location(hotel_location)
-# {checkin_date_str}
-# {checkout_date_str}
-# API.set_num_rooms({num_rooms})
-# API.select_room_type({room_type})
-# API.set_min_room_price({min_price_room})
-# API.set_max_room_price({max_price_room})
-# API.search()"""
-#     print("API:", t)
-#     print("###")
-#     return "Booking done"
+def home_search(location="None", home_type="None", buy_or_rent="None", floor_number="None",
+                max_commute_time="None", max_price="None", max_square_feet="None", min_price="None",
+                min_square_feet="None", num_balconies="None", num_baths="None", num_beds="None", num_garages="None",
+                num_swimming_pools="None"):
+    if floor_number == "None":
+        floor_number_str = f"""API.set_floor_number("None")"""
+    else:
+        floor_number_str = f"""API.set_floor_number({floor_number})"""
+
+    if max_commute_time == "None":
+        max_commute_time_str = f"""API.set_max_commute_time("None")"""
+    else:
+        max_commute_time_str = f"""API.set_max_commute_time({max_commute_time})"""
+
+    if max_price == "None":
+        max_price_str = f"""API.set_max_price("None")"""
+    else:
+        max_price_str = f"""API.set_max_price({max_price})"""
+
+    if max_square_feet == "None":
+        max_square_feet_str = f"""API.set_max_square_feet("None")"""
+    else:
+        max_square_feet_str = f"""API.set_max_square_feet({max_square_feet})"""
+
+    if min_price == "None":
+        min_price_str = f"""API.set_min_price("None")"""
+    else:
+        min_price_str = f"""API.set_min_price({min_price})"""
+
+    if min_square_feet == "None":
+        min_square_feet_str = f"""API.set_min_square_feet("None")"""
+    else:
+        min_square_feet_str = f"""API.set_min_square_feet({min_square_feet})"""
+
+    if num_balconies == "None":
+        num_balconies_str = f"""API.set_num_balconies("None")"""
+    else:
+        num_balconies_str = f"""API.set_num_balconies({num_balconies})"""
+
+    if num_baths == "None":
+        num_baths_str = f"""API.set_num_baths("None")"""
+    else:
+        num_baths_str = f"""API.set_num_baths({num_baths})"""
+
+    if num_beds == "None":
+        num_beds_str = f"""API.set_num_beds("None")"""
+    else:
+        num_beds_str = f"""API.set_num_beds({num_beds})"""
+
+    if num_garages == "None":
+        num_garages_str = f"""API.set_num_garages("None")"""
+    else:
+        num_garages_str = f"""API.set_num_garages({num_garages})"""
+
+    if num_swimming_pools == "None":
+        num_swimming_pools_str = f"""API.set_num_swimming_pools("None")"""
+    else:
+        num_swimming_pools_str = f"""API.set_num_swimming_pools({num_swimming_pools})"""
+
+    t = f"""API.set_location("{location}")
+API.set_buy_or_rent("{buy_or_rent}")
+{min_price_str}
+{max_price_str}
+{num_beds_str}
+{num_baths_str}
+API.select_home_type({home_type})
+{min_square_feet_str}
+{max_square_feet_str}
+{num_garages_str}
+{num_swimming_pools_str}
+{floor_number_str}
+{max_commute_time_str}
+{num_balconies_str}
+API.search()"""
+    print("API:", t)
+    print("###")
+    return "Home search success!"

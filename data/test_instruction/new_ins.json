@@ -1,6 +1,6 @@
 [
   {
-    "query": "I'm traveling to Sioux Falls between 2023-10-05 and 2023-10-11. Help me book 6 Queen Bed room(s) there between $600 and $860. I also need to purchase train tickets for 6 adults and 4 children for this trip. We will depart from Tallahassee.",
+    "query": "Can you assist me in finding a home in Aurora with 2 bedrooms, 1 bathrooms, 4 swimming pools, 3 garages, with less than 40 minutes for commute, and below $1464000, and a minimum square footage of 1300?",
     "query_id": 200001,
     "api_list": [
       {
@@ -172,6 +172,100 @@
             "default": "None"
           }
         ],
+        "optional_parameters": [],
+        "method": "GET"
+      },
+      {
+        "category_name": "toolver",
+        "tool_name": "sambanova",
+        "api_name": "home_search",
+        "api_description": "Search homes for buying or renting",
+        "required_parameters": [
+                {
+                    "name": "location",
+                    "type": "STRING",
+                    "description": "The \"location\" parameter is to set the location for the search area. The default hotel location is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "home_type",
+                    "type": "STRING",
+                    "description": "The \"home_type\" parameter represents home types for search. For home buying, home_types choices are: \"House\", \"Townhouse\", \"Condo\", \"Land\", \"Multi-family\", \"Mobile\", \"Co-op\"; for home renting, home_types choices are: \"House\", \"Townhouse\", \"Condo\", \"Apartment\". The default select_home_type is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "buy_or_rent",
+                    "type": "STRING",
+                    "description": "The \"buy_or_rent\" parameter is to specify whether to search homes for buying or renting. It can be chosen from 'buy' or 'rent'.",
+                    "default": "None"
+                },
+                {
+                    "name": "floor_number",
+                    "type": "STRING",
+                    "description": "The \"floor_number\" parameter represents the floor number. The default floor_number is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "max_commute_time",
+                    "type": "STRING",
+                    "description": "The \"max_commute_time\" parameter represents the maximum commute time in minute to office location, assuming the office location is already defined. The default max_commute_time is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "max_price",
+                    "type": "STRING",
+                    "description": "The \"max_price\" parameter represents the maximum home price in dollars. The default max_price is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "max_square_feet",
+                    "type": "STRING",
+                    "description": "The \"max_square_feet\" parameter represents the maximum home size in square feet. The default max_square_feet is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "min_price",
+                    "type": "STRING",
+                    "description": "The \"min_price\" parameter represents the minimum home price in dollars. The default min_price is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "min_square_feet",
+                    "type": "STRING",
+                    "description": "The \"min_square_feet\" parameter represents the minimum home size in square feet. The default min_square_feet is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_balconies",
+                    "type": "STRING",
+                    "description": "The \"num_balconies\" parameter represents the number of balconies. The default num_balconies is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_baths",
+                    "type": "STRING",
+                    "description": "The \"num_baths\" parameter represents the number of bathrooms. The default num_baths is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_beds",
+                    "type": "STRING",
+                    "description": "The \"num_beds\" parameter represents the number of bedrooms. The default num_beds is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_garages",
+                    "type": "STRING",
+                    "description": "The \"num_garages\" parameter represents the number of garages. The default num_garages is set to 'None' if nothing is specified.",
+                    "default": "None"
+                },
+                {
+                    "name": "num_swimming_pools",
+                    "type": "STRING",
+                    "description": "The \"num_swimming_pools\" parameter represents the number of swimming pools. The default num_swimming_pools is set to 'None' if nothing is specified.",
+                    "default": "None"
+                }
+            ],
         "optional_parameters": [],
         "method": "GET"
       },
