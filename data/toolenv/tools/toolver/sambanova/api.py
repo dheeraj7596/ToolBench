@@ -466,11 +466,11 @@ API.set_checkout_date(checkout_date)"""
     else:
         max_price_room_str = f"""API.set_max_room_price({max_price_room})"""
 
-    t = f"""API.select_booking_type(\"{booking_type}\")
-API.select_transportation(\"{means_of_transportation}\")
-location_from = Loc(\"{location_from}\")
+    t = f"""API.select_booking_type("{booking_type}")
+API.select_transportation("{means_of_transportation}")
+location_from = Loc("{location_from}")
 API.set_origin(location_from)
-location_to = Loc(\"{location_to}\")
+location_to = Loc("{location_to}")
 API.set_destination(location_to)
 {min_price_ticket_str}
 {max_price_ticket_str}
@@ -478,12 +478,12 @@ API.set_destination(location_to)
 {num_children_str}
 {departure_date_str}
 {return_date_str}
-hotel_location = Loc({location})
+hotel_location = Loc("{location}")
 API.set_hotel_location(hotel_location)
 {checkin_date_str}
 {checkout_date_str}
 {num_rooms_str}
-API.select_room_type({room_type})
+API.select_room_type("{room_type}")
 {min_price_room_str}
 {max_price_room_str}
 API.search()"""
