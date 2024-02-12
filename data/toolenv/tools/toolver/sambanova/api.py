@@ -7,8 +7,9 @@ def forecast_air_pollution(lat: str, lon: str, api_key: str = '2a045ada80a040c4d
 
     """
     url = f"https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat={lat}&lon={lon}&appid={api_key}"
+    dump_url = f"curl -X GET '{url}'"
     print("TOOL: Forecast Air Pollution")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url)
     try:
@@ -24,8 +25,9 @@ def current_air_pollution(lat: str, lon: str, api_key: str = '2a045ada80a040c4d6
 
     """
     url = f"https://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={api_key}"
+    dump_url = f"curl -X GET '{url}'"
     print("TOOL: Current Air Pollution")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url)
     try:
@@ -42,8 +44,9 @@ def geographical_coordinates(q, limit, api_key: str = '2a045ada80a040c4d68880e3a
     """
     q = "+".split(q.strip().split(" "))
     url = f"https://api.openweathermap.org/geo/1.0/direct?q={q}&limit={limit}&appid={api_key}"
+    dump_url = f"curl -X GET '{url}'"
     print("TOOL: Geographical Coordinates")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url)
     try:
@@ -75,8 +78,9 @@ def current_weather_city(q, units, mode, lang, api_key: str = '2a045ada80a040c4d
 
     q = "+".split(q.strip().split(" "))
     url = f"https://api.openweathermap.org/data/2.5/weather?q={q}&appid={api_key}&units={units}&mode={mode}&lang={lang}"
+    dump_url = f"curl -X GET '{url}'"
     print("TOOL: Current Weather City")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url)
     try:
@@ -108,8 +112,9 @@ def forecast_weather_city(q, units, mode, lang, api_key: str = '2a045ada80a040c4
 
     q = "+".split(q.strip().split(" "))
     url = f"https://api.openweathermap.org/data/2.5/forecast?q={q}&appid={api_key}&units={units}&mode={mode}&lang={lang}"
+    dump_url = f"curl -X GET '{url}'"
     print("TOOL: Forecast Weather City")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url)
     try:
@@ -140,8 +145,9 @@ def forecast_weather_latitude_longitude(lat, lon, units, mode, lang, api_key: st
         lang = lang.lower()
 
     url = f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={api_key}&units={units}&mode={mode}&lang={lang}"
+    dump_url = f"curl -X GET '{url}'"
     print("TOOL: Forecast Weather Latitude Longitude")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url)
     try:
@@ -172,8 +178,9 @@ def current_weather_latitude_longitude(lat, lon, units, mode, lang, api_key: str
         lang = lang.lower()
 
     url = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}&units={units}&mode={mode}&lang={lang}"
+    dump_url = f"curl -X GET '{url}'"
     print("TOOL: Current Weather Latitude Longitude")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url)
     try:
@@ -204,8 +211,9 @@ def forecast_weather_zipcode(zip, units, mode, lang, api_key: str = '2a045ada80a
         lang = lang.lower()
 
     url = f"https://api.openweathermap.org/data/2.5/forecast?zip={zip}&appid={api_key}&units={units}&mode={mode}&lang={lang}"
+    dump_url = f"curl -X GET '{url}'"
     print("TOOL: Forecast Weather Zipcode")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url)
     try:
@@ -236,8 +244,9 @@ def current_weather_zipcode(zip, units, mode, lang, api_key: str = '2a045ada80a0
         lang = lang.lower()
 
     url = f"https://api.openweathermap.org/data/2.5/weather?zip={zip}&appid={api_key}&units={units}&mode={mode}&lang={lang}"
+    dump_url = f"curl -X GET '{url}'"
     print("TOOL: Current Weather Zipcode")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url)
     try:
@@ -254,12 +263,13 @@ def delete_image_from_favorites(image_id,
 
     """
     url = f"https://api.thecatapi.com/v1/favourites/{image_id}"
+    dump_url = f"curl -X DELETE '{url}'"
     headers = {
         "Content-Type": "application/json",
         "x-api-key": api_key
     }
     print("TOOL: Delete image from favorites")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.delete(url, headers=headers)
     try:
@@ -299,12 +309,13 @@ def find_images(size, mime_types, order, limit, breeds,
         breeds = breeds.lower()
 
     url = f"https://api.thecatapi.com/v1/images/search?&size={size}&mime_types={mime_types}&order={order}&limit={limit}&breeds={breeds}'"
+    dump_url = f"curl -X GET '{url}'"
     headers = {
         "Content-Type": "application/json",
         "x-api-key": api_key
     }
     print("TOOL: Find images")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url, headers=headers)
     try:
@@ -324,8 +335,9 @@ def get_favorite_cat_images(api_key: str = 'live_r4Ir3NmMzUvp2ODgP3mfEE7kBN80gGa
         "Content-Type": "application/json",
         "x-api-key": api_key
     }
+    dump_url = f"curl -X GET '{url}'"
     print("TOOL: Get favorite cat images")
-    print("API:", url)
+    print("API:", dump_url)
     print("###")
     response = requests.get(url, headers=headers)
     try:
