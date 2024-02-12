@@ -20,14 +20,18 @@ def get_api_list(path):
 
 
 if __name__ == "__main__":
-    in_dir = "/Users/dheerajmekala/Work/ToolBench/data/test_instruction/toolbench_sambanova/booking"
+    in_dir = "/Users/dheerajmekala/Work/ToolBench/data/test_instruction/toolbench_sambanova/weather"
+    lower_flag = True
     csv_path = os.path.join(in_dir, "test.csv")
     df = pd.read_csv(csv_path)
     api_list = get_api_list("/Users/dheerajmekala/Work/ToolBench/data/toolenv/tools/toolver/sambanova.json")
     final_list = []
     id_counter = 0
     for i, row in df.iterrows():
-        query = row["Instruction"]
+        if lower_flag:
+            query = row["Instruction"].lower()
+        else:
+            query = row["Instruction"]
         query_id = id_counter
         final_list.append(
             {
