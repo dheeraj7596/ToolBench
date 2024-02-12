@@ -499,6 +499,7 @@ API.select_room_type("{room_type}")
 {min_price_room_str}
 {max_price_room_str}
 API.search()"""
+    print("TOOL: Booking")
     print("API:", t)
     print("###")
     return "Booking success!"
@@ -578,6 +579,7 @@ API.select_home_type({home_type})
 {max_commute_time_str}
 {num_balconies_str}
 API.search()"""
+    print("TOOL: Home search")
     print("API:", t)
     print("###")
     return "Home search success!"
