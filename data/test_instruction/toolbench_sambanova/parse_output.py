@@ -26,9 +26,9 @@ def modify(api, tool):
         return api
     elif pred_dataset == "weather":
         if api.startswith("curl"):
-            return api
+            return "curl -X GET " + api.strip().split("curl -X GET ")[-1].lower()
         else:
-            return f"curl -X GET '{api}'"
+            return f"curl -X GET '{api.lower()}'"
     elif pred_dataset == "cat":
         if api.startswith("curl"):
             return api
@@ -64,7 +64,7 @@ def parse_api(outer_lines, dataset, tool):
 
 
 if __name__ == "__main__":
-    dataset = "home"
+    dataset = "weather"
     in_file_path = f"/Users/dheerajmekala/Work/ToolBench/data/test_instruction/toolbench_sambanova/{dataset}/logs/out.txt"
     test_csv_path = f"/Users/dheerajmekala/Work/ToolBench/data/test_instruction/toolbench_sambanova/{dataset}/test.csv"
     out_path = f"/Users/dheerajmekala/Work/ToolBench/data/test_instruction/toolbench_sambanova/{dataset}/pred_api_toollama.csv"
